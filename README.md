@@ -57,6 +57,7 @@ http.createServer(function (request, response) {
             //actions (object)
                 //reject (function) execute if webhook was not successfully handelt
                 //resolve (function) execute if webhook was successfully handelt
+                    //pass string to resolve function to display infos in the bluelunar web dashboard (eg. virtual product key)
                 
             //EXAMPLE Payment Webhook Handling with DONE Status & ArticleID
             if(type == "PAYMENT" && status == "DONE"){

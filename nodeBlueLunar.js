@@ -122,8 +122,8 @@ class BlueLunarClient{
             blLog(clc.xterm(42)(json.type) + ": " + clc.xterm(75)(json.payload.oid));
           }
           callback(json.type, json.status, json.payload, json.user, {
-            resolve(){
-              response.end(JSON.stringify({ "token": __$BlueLunar_Token }));
+            resolve(content = ""){
+              response.end(JSON.stringify({ "token": __$BlueLunar_Token, "content": content }));
             },
             reject(){
               response.end(JSON.stringify({ "error": "Rejected" }));
